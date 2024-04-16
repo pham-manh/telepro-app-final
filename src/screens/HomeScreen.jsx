@@ -1,14 +1,15 @@
 import React from 'react';
-import { View } from 'react-native';
+import {View} from 'react-native';
 import Header from '../components/Header';
+import TopTabbar from '../navigation/TopTabbar';
 
 const HomeScreen = () => {
   return (
-    <View >
+    <View>
       <Header />
-    </View >
+      <TopTabbar />
+    </View>
+  );
+};
 
-  )
-}
-
-export default HomeScreen
+export default HomeScreen;
