@@ -1,12 +1,12 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-const CommunityListScreen = () => {
+const CommunityScreen = () => {
   return (
     <View>
-      <Text>CommunityListScreen</Text>
+      <Text>CommunityScreen</Text>
     </View>
   );
 };
 
-export default CommunityListScreen;
+export default CommunityScreen;

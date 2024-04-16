@@ -1,23 +1,44 @@
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import React from 'react';
-import CallListScreen from '../screens/CallListScreen';
-import ChatListScreen from '../screens/ChatListScreen';
-import CommunityListScreen from '../screens/CommunityListScreen';
-import StatusListScreen from '../screens/StatusListScreen';
+import {TabBarData} from '../data/TabbarData';
+import CommunityScreen from '../screens/CommunityScreen';
 import {Colors} from '../theme/Colors';
+import VectorIcon from '../utils/VectorIcon';
 
 const Tab = createMaterialTopTabNavigator();
 
 const TopTabbar = () => {
   return (
     <Tab.Navigator
+      initialRouteName="Chats"
       screenOptions={() => ({
-        tabBarActiveTintColor: Colors.tertiary,
+        tabBarActiveTintColor: Colors.white,
+        tabBarInactiveTintColor: Colors.secondaryColor,
+        tabBarIndicatorStyle: {
+          backgroundColor: Colors.tertiary,
+        },
+        tabBarStyle: {
+          backgroundColor: Colors.primaryColor,
+        },
       })}>
-      <Tab.Screen name="CommunityScreen" component={CommunityListScreen} />
-      <Tab.Screen name="ChatListScreen" component={ChatListScreen} />
-      <Tab.Screen name="CallListScreen" component={CallListScreen} />
-      <Tab.Screen name="StatusListScreen" component={StatusListScreen} />
+      <Tab.Screen
+        name="Community"
+        component={CommunityScreen}
+        options={{
+          tabBarShowLabel: false,
+          tabBarIcon: ({color}) => (
+            <VectorIcon
+              type="FontAwesome"
+              name="users"
+              color={color}
+              size={20}
+            />
+          ),
+        }}
+      />
+      {TabBarData.map(tab => (
+        <Tab.Screen key={tab.id} name={tab.name} component={tab.route} />
+      ))}
     </Tab.Navigator>
   );
 };
