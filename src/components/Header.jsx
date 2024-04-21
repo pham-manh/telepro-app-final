@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, View } from 'react-native';
-import { Colors } from '../theme/Colors';
+import {Text, View} from 'react-native';
+import {Colors} from '../theme/Colors';
 import VectorIcon from '../utils/VectorIcon';
 
 const Header = () => {
@@ -49,12 +49,11 @@ const styles = {
     fontWeight: 'bold',
   },
   iconStyle: {
-   marginHorizontal: 10,
+    marginHorizontal: 10,
   },
   headerIcon: {
     padding: 5,
     flexDirection: 'row',
-   
   },
 };
 export default Header;
