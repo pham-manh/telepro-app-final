@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "631032412003",
+    "project_id": "telopro-52c67",
+    "storage_bucket": "telopro-52c67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631032412003:android:95a5cda337d8f13a978556",
+        "android_client_info": {
+          "package_name": "com.telopro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARDHHyGIlGcNrU_ZNqJhCYyPXsj3kHymg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
