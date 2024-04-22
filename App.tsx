@@ -3,9 +3,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { StatusBar } from 'react-native';
 import ChatScreen from './src/screens/ChatScreen';
+import ContactScreen from './src/screens/ContactScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import { Colors } from './src/theme/Colors';
-// import ContactScreen from './src/screens/ContactScreen';
 
 const Stack = createStackNavigator();
 
@@ -19,7 +19,7 @@ const App = () => {
         }}>
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="ChatScreen" component={ChatScreen} />
-        {/* <Stack.Screen name="ContactScreen" component={ContactScreen} /> */}
+        <Stack.Screen name="ContactScreen" component={ContactScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )
